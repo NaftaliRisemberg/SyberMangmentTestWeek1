@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace SyberMangmentTestWeek1
 {
-	public class DefenceStrategiesBST
+	public class Node
 	{
 		public int MinSeverity {  get; set; }
 		public int MaxSeverity { get; set; }
-		public DefenceStrategiesBST? Left {  get; set; }
-		public DefenceStrategiesBST? Right { get;set; }
+		public Node? Left {  get; set; }
+		public Node? Right { get;set; }
 		public List<string> Defenses { get; set; }
 
-		public DefenceStrategiesBST(int minSeverity, int maxSeverity, List<string> defenses)
+		public Node(int minSeverity, int maxSeverity, List<string> defenses)
 		{
 			MinSeverity = minSeverity;
 			MaxSeverity = maxSeverity;
