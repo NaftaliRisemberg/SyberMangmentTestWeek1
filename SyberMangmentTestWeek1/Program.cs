@@ -20,8 +20,11 @@ class Program
 
 		defenceTree.printPreorder(defenceTree.root);
 
-		string jsonString2 = File.ReadAllText(@"C:\Users\טודוליסט\Desktop\תכנות\project\SyberMangmentTestWeek1\SyberMangmentTestWeek1\Thearts.Json");
+		string jsonString2 = File.ReadAllText(@"C:\Users\טודוליסט\Desktop\תכנות\project\SyberMangmentTestWeek1\SyberMangmentTestWeek1\Threats.Json");
 		List<Threats> thearts = JsonSerializer.Deserialize<List<Threats>>(jsonString2);
+
+		string h= defenceTree.GetTheMatchDefenses(defenceTree.Severity(thearts[0]), defenceTree.root);
+		Console.WriteLine(h);
 	}
 }
 

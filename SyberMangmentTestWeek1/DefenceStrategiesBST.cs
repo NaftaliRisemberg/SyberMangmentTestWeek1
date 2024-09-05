@@ -75,7 +75,24 @@ namespace SyberMangmentTestWeek1
 			return 5;
 		}
 
-
-
+		public string GetTheMatchDefenses(int severity, Node root)
+		{
+			
+			if (root == null)
+				return "";
+			if (severity < root.MinSeverity)
+			{
+				return GetTheMatchDefenses(severity, root.Left);
+			}
+			if(severity > root.MaxSeverity)
+			{
+				return GetTheMatchDefenses(severity, root.Right);
+			}
+			return root.Defenses.ToString();
+		}
 	}
 }
+
+
+
+
